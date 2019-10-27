@@ -39,5 +39,24 @@ let img = document.getElementById('#img');
 function drawPic() {
     img.onload;
     ctx.drawImage(img, 0, 0, 512, 512);
+}
 
+let dataFourByFour = [
+    ["00BCD4", "FFEB3B", "FFEB3B", "00BCD4"],
+    ["FFEB3B", "FFC107", "FFC107", "FFEB3B"],
+    ["FFEB3B", "FFC107", "FFC107", "FFEB3B"],
+    ["00BCD4", "FFEB3B", "FFEB3B", "00BCD4"]
+];
+
+
+function fourByFour() {
+
+    let scale = 512 / 4;
+
+    for (let i = 0; i < 4; i++) {
+        for (let j = 0; j < 4; j++) {
+            ctx.fillStyle = "#" + dataFourByFour[i][j];
+            ctx.fillRect(i * scale, j * scale, (i + 1) * scale, (j + 1) * scale);
+        }
+    }
 }
