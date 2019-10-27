@@ -78,7 +78,7 @@ hr {
     position: absolute;
     top: 16%;
     right: 23%;
-    border: 1px solid lime;
+    border: 1px solid grey;
 }
 
 .switcher {
@@ -100,6 +100,12 @@ hr {
 
 .item:hover {
     background-color: lightgray;
+    cursor: pointer;
+}
+
+.switch .item:nth-child(2) {
+    background-color: white;
+    cursor: auto;
 }
 
 .imgRRs {
