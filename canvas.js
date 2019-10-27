@@ -33,3 +33,11 @@ canvas.addEventListener('mousedown', (e) => {
 canvas.addEventListener('mousemove', draw);
 canvas.addEventListener('mouseup', () => isDrawing = false);
 canvas.addEventListener('mouseout', () => isDrawing = false);
+
+let img = document.getElementById('#img');
+
+function drawPic() {
+    img.onload;
+    ctx.drawImage(img, 0, 0, 512, 512);
+
+}

@@ -101,3 +101,7 @@ hr {
 .item:hover {
     background-color: lightgray;
 }
+
+.imgRRs {
+    display: none;
+}
