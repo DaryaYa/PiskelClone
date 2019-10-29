@@ -60,3 +60,16 @@ function fourByFour() {
         }
     }
 }
+
+function draw32x32(frame, ctx) {
+    let scale1 = 512 / 32;
+    frame.forEach((raw, i) => {
+        raw.forEach((column, j) => {
+            ctx.fillStyle = 'rgba(' + column[0] + ',' + column[1] + ',' + column[2] + ')';
+            ctx.fillRect(j * scale1, i * scale1, (j + 1) * scale1, (i + 1) * scale1);
+        });
+    });
+}
+let draw32 = document.querySelector('.draw32x32');
+draw32.onclick = () => fetch('./data/32x32.json')
+    .then(response => response.json().then(json => draw32x32(json, ctx)));
