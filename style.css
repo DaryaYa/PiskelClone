@@ -103,11 +103,6 @@ hr {
     cursor: pointer;
 }
 
-.switch .item:nth-child(2) {
-    background-color: white;
-    cursor: auto;
-}
-
 .imgRRs {
     display: none;
 }
